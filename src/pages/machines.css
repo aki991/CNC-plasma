@@ -1,0 +1,131 @@
+.shell:has(.machine-page) { grid-template-rows:minmax(0,1fr); }
+.machine-page { --mc-blue:#126ed3; display:grid; gap:15px; min-width:0; }
+.machine-page>.page-heading,.machine-page>.metrics { margin-bottom:0; }
+.machine-page .card+.card { margin-top:0; }
+.machine-page .heading-actions { flex-wrap:wrap; }
+.machine-page .metric { min-width:0; }
+.machine-kpis,.machine-stats { grid-template-columns:repeat(6,minmax(0,1fr)); gap:10px; }
+.machine-kpis .metric,.machine-stats .metric { gap:10px; padding:13px; min-height:88px; }
+.machine-kpis .metric-value strong,.machine-stats .metric-value strong { font-size:clamp(18px,1.55vw,26px); white-space:normal; }
+.machine-kpis .metric-icon,.machine-stats .metric-icon { width:35px; height:35px; }
+.machine-kpis .metric-icon svg,.machine-stats .metric-icon svg { width:21px; height:21px; }
+.machine-kpis .metric-copy h2,.machine-stats .metric-copy h2 { font-size:13px; }
+.machine-live-grid,.machine-chart-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+.machine-detail-grid { display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); gap:14px; align-items:start; }
+.machine-live-card { display:flex; flex-direction:column; gap:12px; min-width:0; }
+.machine-live-header { display:flex; gap:11px; align-items:center; }
+.machine-live-header>div { flex:1; min-width:0; }
+.machine-live-header h2 { margin:0 0 4px; font-size:20px; }
+.machine-live-header p,.machine-section-title p { margin:0; color:var(--muted); font-size:13px; }
+.machine-live-strip { display:flex; gap:8px 15px; align-items:center; flex-wrap:wrap; color:var(--muted); font-size:13px; }
+.machine-connection { display:inline-flex; gap:5px; align-items:center; }
+.machine-connection.online { color:#167044; }
+.machine-connection.offline { color:#637082; }
+.machine-page .badge.red { color:#a8202a; background:#fde7e8; }
+.machine-status,.machine-simulation { white-space:nowrap; }
+.machine-program { display:grid; gap:5px; min-width:0; padding:12px 13px; background:#eef4fc; border:1px solid #dce7f4; border-radius:8px; }
+.machine-program small,.machine-times small { color:#506682; font-weight:500; }
+.machine-program code { overflow-wrap:anywhere; color:#163456; font-weight:700; font-size:14px; }
+.machine-program-progress { display:grid; gap:7px; }
+.machine-program-progress>div:first-child { display:flex; justify-content:space-between; gap:6px; align-items:center; font-size:13px; }
+.machine-program-progress strong { font-variant-numeric:tabular-nums; font-size:20px; color:#0759ba; }
+.machine-page .machine-program-progress progress,.machine-progress-empty { display:block; width:100%; height:12px; border-radius:10px; background:#e0eaf5; }
+.machine-page .machine-program-progress progress::-webkit-progress-bar { background:#e0eaf5; border-radius:10px; }
+.machine-page .machine-program-progress progress::-webkit-progress-value { background:linear-gradient(90deg,#2588f7,#0864d3); border-radius:10px; }
+.machine-page .machine-program-progress progress::-moz-progress-bar { background:#126ed3; border-radius:10px; }
+.machine-data { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); column-gap:16px; margin:0; }
+.machine-data>div { min-width:0; display:flex; align-items:baseline; justify-content:space-between; gap:8px; border-bottom:1px solid var(--rule); padding:7px 0; }
+.machine-data dt { color:#4f627b; font-size:12px; }
+.machine-data dd { min-width:0; margin:0; text-align:right; font-size:12px; font-weight:600; overflow-wrap:anywhere; font-variant-numeric:tabular-nums; }
+.machine-data .text-link { font-size:12px; white-space:normal; }
+.machine-actions { display:flex; align-items:center; flex-wrap:wrap; gap:7px 9px; }
+.machine-actions .button { font-size:12px; min-height:35px; }
+.machine-live-card>.machine-actions { margin-top:auto; }
+.machine-detail-hero { border-top:3px solid var(--mc-blue); background:linear-gradient(160deg,#edf5ff 0%,#f8fbfe 61%); padding:19px; gap:18px; }
+.machine-detail-hero .machine-program { background:#f8fbff; padding:15px; }
+.machine-detail-hero code { font-size:clamp(15px,1.6vw,26px); }
+.machine-detail-hero .machine-program-progress strong { font-size:30px; }
+.machine-detail-hero .machine-program-progress progress,.machine-detail-hero .machine-progress-empty { height:17px; }
+.machine-times { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; }
+.machine-times>div { display:grid; gap:6px; align-content:start; background:#fff9; padding:11px 9px; border:1px solid #e0e9f5; border-radius:8px; }
+.machine-times strong,.machine-cycle-average { color:#153656; font-size:clamp(18px,1.65vw,29px); font-variant-numeric:tabular-nums; }
+.machine-order .machine-actions { margin-top:11px; }
+.machine-confirm { margin-top:10px; }
+.machine-nest-thumb { display:block; width:100%; height:105px; background:#eaf1f8; border:1px solid #d6e1ec; border-radius:7px; margin-top:10px; padding:5px; color:#485c70; fill:currentColor; }
+.machine-control-row { display:grid; gap:9px; }
+.machine-controls .field { display:flex; align-items:center; flex-wrap:wrap; gap:6px; margin:0 4px 0 0; }
+.machine-controls .field>span { font-size:12px; }
+.machine-controls select,.machine-chart select,.machine-range input,.machine-range select { width:auto; max-width:100%; min-height:34px; }
+.machine-controls .card-heading,.machine-alarms .card-heading { flex-wrap:wrap; }
+.machine-period { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:9px; }
+.machine-period-head { display:grid; gap:4px; }
+.machine-period-head>div,.machine-section-title h2 { display:flex; gap:7px; align-items:center; }
+.machine-period-head svg,.machine-section-title svg { color:var(--mc-blue); }
+.machine-period-head>span { color:var(--muted); font-size:12px; }
+.machine-period-buttons { display:flex; flex-wrap:wrap; }
+.machine-period-buttons button { font-size:12px; min-height:31px; }
+.machine-range { display:flex; flex-wrap:wrap; align-items:end; gap:8px 11px; }
+.machine-period>.machine-range { flex-basis:100%; }
+.machine-report { display:grid; gap:11px; }
+.machine-section-title h2 { font-size:20px; margin:4px 0 6px; }
+.machine-section-title h2 svg { width:20px; height:20px; }
+.machine-chart { min-width:0; }
+.machine-chart>.field { margin-bottom:8px; }
+.machine-chart .recharts-surface { outline-offset:-2px; }
+.machine-track { height:39px; position:relative; overflow:hidden; background:#e9eff7; border-radius:7px; border:1px solid #dce5f0; }
+.machine-track-segment { height:100%; position:absolute; inset-block:0; border:0; color:white; font-size:11px; padding:0; overflow:hidden; white-space:nowrap; }
+.machine-track-segment:is(:hover,:focus-visible) { outline:2px solid #112f53; outline-offset:-2px; z-index:1; }
+.machine-track-labels,.machine-key { display:flex; flex-wrap:wrap; gap:7px 14px; color:var(--muted); font-size:12px; }
+.machine-track-labels { justify-content:space-between; margin:12px 0 4px; }
+.machine-key { margin-top:9px; }
+.machine-key span { display:inline-flex; align-items:center; gap:5px; }
+.machine-key i,.machine-events i { width:9px; height:9px; border-radius:3px; flex:none; }
+.machine-page .state-setup { background:#6556b6; }
+.machine-page .state-cutting { background:#126ed3; }
+.machine-page .state-idle { background:#697e97; }
+.machine-page .state-paused { background:#ab620b; }
+.machine-page .state-alarm { background:#c63e40; }
+.machine-page .state-offline { background:#526172; }
+.machine-events { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:5px 9px; max-height:176px; overflow:auto; margin-top:12px; }
+.machine-events button { display:flex; align-items:center; text-align:left; gap:6px; min-width:0; min-height:32px; background:#f1f6fb; border:1px solid #e1e9f3; border-radius:6px; padding:5px 6px; font-size:11px; }
+.machine-events button:hover { background:#e3effe; }
+.machine-events button svg { margin-left:auto; flex:none; }
+.machine-run-history { margin-top:12px; font-size:13px; }
+.machine-run-row { display:flex; flex-wrap:wrap; align-items:center; gap:7px 13px; padding:8px 0; border-bottom:1px solid var(--rule); }
+.machine-run-row>div { flex:1; min-width:150px; overflow-wrap:anywhere; }
+.machine-run-row small,.machine-alarm small { display:block; color:var(--muted); margin-top:3px; }
+.machine-alarm-list { display:grid; gap:7px; }
+.machine-alarm-list>.button { justify-self:start; }
+.machine-alarm { display:grid; grid-template-columns:36px minmax(0,1fr) auto auto; align-items:center; gap:9px 12px; border:1px solid #e0e8f1; border-radius:8px; padding:8px; font-size:13px; }
+.machine-alarm>.metric-icon { width:35px; height:35px; }
+.machine-alarm>.metric-icon svg { width:20px; height:20px; }
+.machine-alarm-status { display:flex; flex-wrap:wrap; align-items:center; gap:7px; font-variant-numeric:tabular-nums; }
+.machine-alarm .button { min-height:34px; }
+.machine-reason { display:grid; gap:8px; margin-top:13px; }
+.machine-reason textarea { resize:vertical; }
+@media (max-width:1450px) {
+  .machine-kpis,.machine-stats { grid-template-columns:repeat(3,minmax(0,1fr)); }
+}
+@media (max-width:1100px) {
+  .machine-live-card .machine-data,.machine-order .machine-data { grid-template-columns:1fr; }
+  .machine-events { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media (max-width:780px) {
+  .machine-page { gap:10px; }
+  .machine-kpis,.machine-stats { grid-template-columns:repeat(2,minmax(0,1fr)); gap:7px; }
+  .machine-kpis .metric,.machine-stats .metric { min-height:67px; padding:8px; gap:6px; }
+  .machine-kpis .metric-icon,.machine-stats .metric-icon { width:27px; height:27px; }
+  .machine-kpis .metric-icon svg,.machine-stats .metric-icon svg { width:17px; height:17px; }
+  .machine-live-grid,.machine-detail-grid,.machine-chart-grid,.machine-events { grid-template-columns:minmax(0,1fr); gap:9px; }
+  .machine-live-header { flex-wrap:wrap; }
+  .machine-live-header h2 { font-size:17px; }
+  .machine-detail-hero { padding:12px; gap:12px; }
+  .machine-times { grid-template-columns:1fr; gap:4px; }
+  .machine-times>div { display:flex; justify-content:space-between; align-items:center; padding:7px; }
+  .machine-alarm { grid-template-columns:30px minmax(0,1fr); }
+  .machine-alarm>.metric-icon { width:28px; height:28px; }
+  .machine-alarm-status { grid-column:2; }
+  .machine-alarm .button { grid-column:2; justify-self:start; }
+  .machine-page .card-heading h2 { font-size:16px; }
+  .machine-period-buttons button { padding-inline:7px; }
+}
